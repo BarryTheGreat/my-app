@@ -1,5 +1,5 @@
 import { PrismaClient } from "@prisma/client";
-import Form from "./_components/Form";
+import Form from "./components/Form";
 
 export default async function Home() {
   const prisma = new PrismaClient();
