@@ -11,8 +11,8 @@ datasource db {
 }
 
 model User {
-  id    BigInt     @id @default(autoincrement())
-  email String  @unique
-  firstname  String
+  id        BigInt @id @default(autoincrement())
+  email     String @unique
+  firstname String
   lastname  String
 }

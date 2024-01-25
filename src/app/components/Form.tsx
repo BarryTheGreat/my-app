@@ -1,12 +1,15 @@
 import { AddUser } from "../action";
+import { DM_Serif_Display } from "next/font/google";
+import type { AppProps } from "next/app";
 
 function Form() {
   return (
-    <main className="flex items-center justify-center h-screen">
+    <main className="flex items-center justify-center max-h-screen">
       <form
         action={AddUser}
         method="post"
-        className="bg-gradient-to-br from-cyan-500 to-blue-500 p-8 rounded-md shadow-md flex flex-col gap-4"
+        className="bg-gradient-to-br from-cyan-500 to-blue-500 p-8 flex flex-col gap-4"
+        style={{ fontFamily: "DM_Serif_Display", borderRadius: "15px" }}
       >
         <label className="text-lg font-semibold">First Name</label>
         <input

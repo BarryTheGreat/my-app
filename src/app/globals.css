@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --background-image: url("/public/LOGIN_BG.jpg"); /* Default background image */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,21 +14,44 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    --background-image: url("/public/LOGIN_BG.jpg"); /* Dark mode background image */
   }
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-image: var(--background-image);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  /* Other styles for the body element */
 }
+
+/* ... rest of your CSS ... */
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.text-overlay {
+  /* Add styles to position the overlay at the top center */
+  top: 0;
+  transform: translateX(-50%) translateY(0);
+}
+
+.text-item {
+  /* Add styles for the text items */
+  text-decoration: none;
+  color: white;
+  font-size: 1rem; /* You can adjust the font size as needed */
+}
+
+.account {
+  /* Add styles for the 'Account' link */
+  text-decoration: none;
+  color: white;
+  font-size: 1rem; /* You can adjust the font size as needed */
+  font-weight: bold; /* You can adjust the font weight as needed */
 }
