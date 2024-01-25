@@ -10,9 +10,10 @@ const ImageContainer = () => {
 
   const bottomRightStyle: React.CSSProperties = {
     position: "absolute",
-    bottom: "10px",
+    bottom: "5px",
     right: "10px",
-    textAlign: "right",
+    textAlign: "left",
+    fontFamily: "DM_Serif_Display",
   };
 
   return (
@@ -24,7 +25,7 @@ const ImageContainer = () => {
       />
       <div
         className="text-overlay absolute left-1/2 w-full"
-        style={{ top: "80px" }}
+        style={{ top: "50px" }}
       >
         <div className="flex justify-center">
           <a href="equipment" className="text-item mr-10" style={anchorStyle}>
@@ -40,7 +41,7 @@ const ImageContainer = () => {
       </div>
       <div
         className="text-overlay absolute right-0 flex top-0"
-        style={{ top: "70px" }}
+        style={{ top: "54px" }}
       >
         <div>
           <a href="form" className="account" style={anchorStyle}>
@@ -49,33 +50,27 @@ const ImageContainer = () => {
         </div>
       </div>
       <div
+        className="grid grid-cols-2 gap-4 mb-24 mr-44"
         style={bottomRightStyle}
-        className="grid gap-4 grid-cols-2 grid-rows-3 "
       >
-        <div className="grid gap-4 grid-cols-1 grid-rows-3">
-          <a href="about" style={anchorStyle}>
-            About Us
-          </a>
-          <a href="team" style={anchorStyle}>
-            The Team
-          </a>
-          <a href="goals" style={anchorStyle}>
-            Our Goals
-          </a>
-        </div>
-
-        <div className="grid gap-4 grid-cols-1 grid-rows-3">
-          <a href="contact" style={anchorStyle}>
-            Contact Us
-          </a>
-
-          <a href="more" style={anchorStyle}>
-            More on Trek-La-Vista
-          </a>
-          <a href="feedback" style={anchorStyle}>
-            Feedback
-          </a>
-        </div>
+        <a className="p-4 text-2xl" href="team">
+          The Team
+        </a>
+        <a className="p-4 text-2xl" href="goals">
+          Our Goals
+        </a>
+        <a className="p-4 text-2xl" href="about">
+          About Us
+        </a>
+        <a className="p-4 text-2xl" href="contact">
+          Contact Us
+        </a>
+        <a className="p-4 text-2xl" href="feedback">
+          Feedback
+        </a>
+        <a className="p-4 text-2xl" href="more">
+          More
+        </a>
       </div>
     </div>
   );
